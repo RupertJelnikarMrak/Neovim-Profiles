@@ -23,7 +23,7 @@ cat << EOF >> ~/.neovim_profiles.sh
 
 function nvims() {
     items=("default" "\$(ls -d $CONFIG_DIR/*/ | xargs -n 1 basename)")
-    config=\$(printf "%s\n" "\${items[@]}" | fzf --prompt="  Neovim Config" --height=~50% --layout=reverse --border --exit-0)
+    config=\$(printf "%s\n" "\${items[@]}" | fzf --prompt="  Neovim Config: " --height=~50% --layout=reverse --border --exit-0)
     if [[ -z \$config ]]; then
         echo "Nothing selected"
         return 0
