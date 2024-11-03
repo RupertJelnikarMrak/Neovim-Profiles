@@ -10,9 +10,6 @@ vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.breakindentopt = "shift:1"
 
-vim.opt.textwidth = 80
-vim.opt.colorcolumn = "80"
-
 vim.opt.spell = false
 vim.opt.spelllang = "en_gb"
 
