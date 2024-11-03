@@ -15,7 +15,7 @@ echo "Generating Neovim profile setup..."
 for profile in "$CONFIG_DIR"/*; do
     if [[ -d "$profile" ]]; then
         profile_name=$(basename "$profile")
-        echo "alias n$profile_name=\"NVIM_APPNAME=neovim/$profile_name nvim\"" >> ~/.neovim_profiles.sh
+        echo "alias n${profile_name,,}=\"NVIM_APPNAME=neovim/$profile_name nvim\"" >> ~/.neovim_profiles.sh
     fi
 done
 
