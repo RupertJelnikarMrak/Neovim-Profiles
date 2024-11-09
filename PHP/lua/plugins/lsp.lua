@@ -65,6 +65,18 @@ require('mason-lspconfig').setup({
                 },
             })
         end,
+
+        html = function()
+            require('lspconfig').html.setup({
+                filetypes = { 'html', 'php' },
+            })
+        end,
+
+        emmet_language_server = function()
+            require('lspconfig').emmet_language_server.setup({
+                filetypes = { 'html', 'php' },
+            })
+        end,
     },
 })
 

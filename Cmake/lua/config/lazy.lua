@@ -20,20 +20,36 @@ local plugins = {
     { 'theprimeagen/harpoon' },
     { 'mbbill/undotree' },
     { 'tpope/vim-fugitive' },
-    { 'nvim-tree/nvim-tree.lua',             dependencies = { { 'kyazdani42/nvim-web-devicons' } } },
-    { 'nvim-tree/nvim-web-devicons' },
+    { 'nvim-tree/nvim-tree.lua',             dependencies = { { 'nvim-tree/nvim-web-devicons' } } },
     { 'nvim-lualine/lualine.nvim',           dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { "Djancyp/better-comments.nvim" },
     { 'numToStr/Comment.nvim' },
     { 'akinsho/toggleterm.nvim' },
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl' },
-    { "kylechui/nvim-surround",              version = "*",                                        event = "VeryLazy" },
+    { "kylechui/nvim-surround",              version = "*",                                       event = "VeryLazy" },
     {
         "folke/flash.nvim",
         event = "VeryLazy",
         ---@type Flash.Config
         opts = {},
         -- stylua: ignore
+    },
+    {
+        'lewis6991/gitsigns.nvim', event = "VeryLazy", opts = {},
+    },
+    { 'rcarriga/nvim-notify' },
+    {
+        "Civitasv/cmake-tools.nvim",
+        opts = {
+            cmake_build_directory = "build",
+            cmake_generate_optison = { "-D", "CMAKE_EXPORT_COMPILE_COMMANDS=1" }
+        }
+    },
+
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
     },
 
     {

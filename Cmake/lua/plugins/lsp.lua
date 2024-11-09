@@ -27,7 +27,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Configure Mason
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'lua_ls', 'jsonls', 'yamlls', 'dockerls', 'clangd', 'cmake' },
+    ensure_installed = { 'lua_ls', 'jsonls', 'yamlls', 'dockerls', 'clangd', 'neocmake' },
     automatic_installation = true,
     handlers = {
         function(server_name)
@@ -56,6 +56,18 @@ require('mason-lspconfig').setup({
                         },
                     },
                 },
+            })
+        end,
+
+        neocmake = function()
+            require('lspconfig').neocmake.setup({
+                filetypes = { 'cmake' },
+            })
+        end,
+
+        clangd = function()
+            require('lspconfig').clangd.setup({
+                filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
             })
         end,
     },

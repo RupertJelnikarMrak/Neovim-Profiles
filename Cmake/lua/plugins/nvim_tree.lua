@@ -21,5 +21,3 @@ end
 
 vim.keymap.set('n', '<leader>pv', api.tree.open, opts("open"))
 vim.keymap.set('n', '<leader>vp', api.tree.close, opts("close"))
-
-require("nvim-web-devicons").setup()

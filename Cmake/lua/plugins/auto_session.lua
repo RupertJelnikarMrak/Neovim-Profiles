@@ -11,3 +11,5 @@ require("auto-session").setup({
 
 vim.keymap.set('n', '<C-s>', '<cmd>SessionSave<CR>')
 vim.keymap.set('n', '<leader>sf', '<cmd>SessionSearch<CR>')
+
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

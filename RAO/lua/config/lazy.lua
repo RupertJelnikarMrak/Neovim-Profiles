@@ -36,6 +36,12 @@ local plugins = {
     },
 
     {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },
+
+    {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         dependencies = {
