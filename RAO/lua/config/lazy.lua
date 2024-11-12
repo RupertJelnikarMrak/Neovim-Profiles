@@ -20,7 +20,7 @@ local plugins = {
     { 'theprimeagen/harpoon' },
     { 'mbbill/undotree' },
     { 'tpope/vim-fugitive' },
-    { 'nvim-tree/nvim-tree.lua',             dependencies = { { 'kyazdani42/nvim-web-devicons' } } },
+    { 'nvim-tree/nvim-tree.lua',             dependencies = { { 'nvim-tree/nvim-web-devicons' } } },
     { 'nvim-lualine/lualine.nvim',           dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { "Djancyp/better-comments.nvim" },
     { 'numToStr/Comment.nvim' },
@@ -34,7 +34,10 @@ local plugins = {
         opts = {},
         -- stylua: ignore
     },
-
+    {
+        'lewis6991/gitsigns.nvim', event = "VeryLazy", opts = {},
+    },
+    { 'rcarriga/nvim-notify' },
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",

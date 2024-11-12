@@ -1,3 +1,4 @@
+require"plugins.notify"
 require"plugins.lsp"
 require"plugins.theme"
 require"plugins.flash"
